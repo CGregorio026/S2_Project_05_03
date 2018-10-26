@@ -79,7 +79,7 @@ a.battleMarkers {
 }
 
 /* 
-I just referred to this as the id instead of putting the id because only one element at one time can ever have an id.
+I just referred to this as the id instead of putting the id because only one element at one time can ever have an id. This is in absolute positioning, which places the markers from the top left corner.
 */
 #marker1 {
     top: 220px;
@@ -115,6 +115,16 @@ I just referred to this as the id instead of putting the id because only one ele
 (220, 340) (194, 358) (202, 400) (217, 452) (229, 498) (246, 544) */
 
 /* Map Information Styles */
+/* 
+This sets the default map info to hidden, so it is not displayed on the page regularly. The only way it will be displayed is by being called upon by the webpage (As seen in the next step)
+*/
 div.mapInfo {
     display: none;
+}
+
+/* 
+When the battle markers are hovered over, it will display what is in the map info class as a block element.
+*/
+a.battleMarkers:hover+div.mapInfo {
+    display: block;
 }
